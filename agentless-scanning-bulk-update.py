@@ -25,7 +25,10 @@ payload = {
 }
 
 # Generate a Token for API authentication to Prisma Cloud
-token = requests.post(console_url+"/api/v1/authenticate", json=payload, verify=0).json()['token']
+try:
+    token = requests.post(console_url+"/api/v1/authenticate", json=payload, verify=0).json()['token']
+except requests.exceptions.RequestException as e:
+    raise SystemExit(e)
 
 # Set Prisma Cloud Headers for Login with token
 pccHeaders = {
