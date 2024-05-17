@@ -21,7 +21,9 @@ python3 agentless-scanning-bulk-update.py
   - **PRISMA_PASSWORD** : your Prisma Cloud Secret Key
 - Modify the values of the following variables in the script :
   - **AWS_REGIONS** : the list of AWS regions you want to scan
-  - **HUB_ACCOUNT** : the name (**not** the account ID), in Prisma Cloud, of the AWS account you want to use as hub account
+  - **HUB_ACCOUNT** : the name or AWS ID of the AWS account you want to use as hub account
+    - if your AWS accounts are onboarded as standalone accounts (no AWS Organization), put the name of the account in Prisma Cloud, example : "aws-hub"
+    - if your AWS accounts are onboarded as part of an AWS Organization, put the ID of the account, example : "123412341234"
 
 ### Credits
 Stephen Gordon, who worked on the initial script used as baseline for this one

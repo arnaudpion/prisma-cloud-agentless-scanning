@@ -12,7 +12,7 @@ urllib3.disable_warnings(category=urllib3.exceptions.InsecureRequestWarning)
 
 # Script variables that need to be updated
 AWS_REGIONS = [] # List of AWS regions that will be scanned, example : AWS_REGIONS = ["eu-west-1","us-east-2"]
-HUB_ACCOUNT = "" # Name of the AWS account used as Hub to scan other accounts, example : HUB_ACCOUNT = "aws-hub"
+HUB_ACCOUNT = "" # Name or ID of the AWS account used as Hub to scan other accounts, refer to README.md for examples
 
 # Set Credentials
 console_url = os.getenv("COMPUTE_API_ENDPOINT")
