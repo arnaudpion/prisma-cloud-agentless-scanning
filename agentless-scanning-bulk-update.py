@@ -61,10 +61,16 @@ if AWS_REGIONS != [] and HUB_ACCOUNT != "":
             for i in response:
                 # Ignore Hub account
                 if i["agentlessScanSpec"]["hubAccount"] == False:
-                    # Update configuration for the account : AWS Regions, Hub. 'Scanners' also needs to be 0 when scanning with a Hub account
+
+                    # Update configuration for the account : AWS Regions, Hub
                     i["agentlessScanSpec"]["regions"] = AWS_REGIONS
                     i["agentlessScanSpec"]["hubCredentialID"] = HUB_ACCOUNT
+
+                    # 'Scanners' needs to be 0 when scanning with a Hub account
                     i["agentlessScanSpec"]["scanners"] = 0
+
+                    # 'skipPermissionsCheck' set to True to avoid failure on accounts with missing agentless scanning permissions
+                    i["agentlessScanSpec"]["skipPermissionsCheck"] = True
 
                     # Initialize data and make the API call to update the account with its new configuration
                     data=[]
