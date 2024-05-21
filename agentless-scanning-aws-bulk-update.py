@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 # Script to configure AWS Regions and Hub Account in bulk for Prisma Cloud Agentless Scanning
-# Usage: ./agentless-scanning-bulk-update.py
+# Usage: ./agentless-scanning-aws-bulk-update.py
 
 import os
 import requests

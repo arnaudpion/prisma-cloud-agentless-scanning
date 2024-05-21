@@ -1,7 +1,7 @@
 # prisma-cloud-agentless-scanning
 Scripts to update agentless scanning configuration in bulk in Prisma Cloud
 
-## agentless-scanning-bulk-update.py
+## agentless-scanning-aws-bulk-update.py
 This python script allows you to bulk update the agentless scanning configuration of AWS accounts.
 
 ### Usage
@@ -9,7 +9,7 @@ This python script allows you to bulk update the agentless scanning configuratio
 python3 -m venv venv
 source venv/bin/activate
 pip3 install -r requirements.txt
-python3 agentless-scanning-bulk-update.py
+python3 agentless-scanning-aws-bulk-update.py
 ```
 
 ### Requirements
